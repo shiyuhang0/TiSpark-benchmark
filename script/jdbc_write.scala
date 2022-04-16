@@ -1,5 +1,6 @@
 /**
  * 以导入 ORDERS 表数据为例（需要先建表）
+ * 使用：在 spark-shell 中 :load /{where}/jdbc_write.scala
  */
 
 import org.apache.spark.sql.types._

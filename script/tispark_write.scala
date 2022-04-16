@@ -1,5 +1,6 @@
 /**
  * 以导入 ORDERS 表数据为例（需要先建表）
+ * 使用：在 spark-shell 中 :load /{where}/tispark_write.scala
  */
 import org.apache.spark.sql.types._
 val schema = new StructType().add("O_ORDERKEY",IntegerType).add("O_CUSTKEY",IntegerType).add("O_ORDERSTATUS",StringType).add("O_TOTALPRICE",DecimalType(15,2)).add("O_ORDERDATE",DateType).add("O_ORDERPRIORITY",StringType).add("O_CLERK",StringType).add("O_SHIPPRIORITY",IntegerType).add("O_COMMENT",StringType)
