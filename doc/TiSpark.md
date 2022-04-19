@@ -1,4 +1,4 @@
-# TiSpark 准备
+# 使用 TiSpark
 1. 下载 tispark 符合版本的 jar 包
 2. 配置 spark.defaults.conf
 ```
@@ -17,14 +17,4 @@ spark.sql.catalog.tidb_catalog.pd.addresses {pd_address}
 # spark.executor.memory 1g
 # spark.ui.port 3000
 ```
-
-# HDFS 写入 TiDB
-请确保已经将数据 put 到 HDFS 中。
-
-- 使用 TiSpark 写入: 参考 script 下的 [tispark_write.scala](../script/tispark_write.scala)
-- 使用 Spark JDBC 写入：参考 script 下的 [jdbc_write.scala](../script/jdbc_write.scala)
-
-
-# 删除 TiDB
-参考 script 下的 [tispark_delete.scala](../script/tispark_delete.scala)
-
+3. 启动 Spark-shell: bin/spark-shell --jars ${whereitis}/${tispark-jar}.jar
