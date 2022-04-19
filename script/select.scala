@@ -1,13 +1,13 @@
 /**
  * 执行 TPC-H query, SQL 见 query 文件
- * 使用：在 sark-shell 中 :load /{where}/select.scala (query.scala 需要放在当前目录下)
+ * 使用：在 sark-shell 中 :load /{where}/select.scala (注意：需要指定 query.scala 的位置)
  * - TiSpark 测试：调用 test.tiSpark()
  * - Spark JDBC 测试：调用 test.sparkJDBC()
  */
 
 import org.apache.spark.sql.DataFrame
 
-:load query.scala
+:load {where}/query.scala
 object test {
 
   def doAction(df:DataFrame):Unit = {
